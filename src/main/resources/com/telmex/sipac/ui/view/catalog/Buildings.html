@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta name="vaadin-version" content="8.0.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" size-full margin="false">
+   <vaadin-vertical-layout style-name="v-scrollable" spacing="false" width="850px" height-full margin="false" :middle :center>
+    <vaadin-css-layout size-full value="263 registros encontrados.">
+     <vaadin-vertical-layout style-name="card" margin-top="false" margin-bottom="false">
+      <vaadin-css-layout width-full>
+       <vaadin-vertical-layout margin="false">
+        <vaadin-horizontal-layout width-full>
+         <vaadin-combo-box caption="Estado:" style-name="tiny" id="cboState" data-item-type="java.lang.String" _id="cboState">
+          <option item="Option1">Option 1</option>
+          <option item="Option2">Option 2</option>
+          <option item="Option3">Option 3</option>
+         </vaadin-combo-box>
+         <vaadin-combo-box caption="Ubicación:" style-name="tiny" id="cboLocation" data-item-type="java.lang.String" _id="cboLocation">
+          <option item="Option1">Option 1</option>
+          <option item="Option2">Option 2</option>
+          <option item="Option3">Option 3</option>
+         </vaadin-combo-box>
+         <vaadin-combo-box caption="Uso:" style-name="tiny" id="cboUse" data-item-type="java.lang.String" _id="cboUse">
+          <option item="Option1">Option 1</option>
+          <option item="Option2">Option 2</option>
+          <option item="Option3">Option 3</option>
+         </vaadin-combo-box>
+        </vaadin-horizontal-layout>
+        <vaadin-horizontal-layout width-full>
+         <vaadin-combo-box caption="División:" style-name="tiny" id="cboDivision" data-item-type="java.lang.String" _id="cboDivision">
+          <option item="Option1">Option 1</option>
+          <option item="Option2">Option 2</option>
+          <option item="Option3">Option 3</option>
+         </vaadin-combo-box>
+         <vaadin-text-field caption="CP:" style-name="tiny" id="txtPostalCode" _id="txtPostalCode"></vaadin-text-field>
+         <vaadin-text-field caption="Texto a buscar:" style-name="tiny" id="txtSearch" _id="txtSearch"></vaadin-text-field>
+        </vaadin-horizontal-layout>
+        <vaadin-horizontal-layout width-full>
+         <vaadin-horizontal-layout :middle :right>
+          <vaadin-button icon="fonticon://Vaadin-Icons/e805" style-name="tiny friendly" id="btnSearch" plain-text _id="btnSearch">
+            Buscar 
+          </vaadin-button>
+         </vaadin-horizontal-layout>
+        </vaadin-horizontal-layout>
+       </vaadin-vertical-layout>
+      </vaadin-css-layout>
+      <vaadin-grid width-full>
+       <table>
+        <colgroup>
+         <col column-id="number" sortable>
+         <col column-id="building" sortable>
+         <col column-id="address" sortable>
+         <col column-id="use" sortable>
+         <col column-id="type" sortable>
+         <col column-id="add" sortable="false">
+        </colgroup>
+        <thead>
+         <tr default>
+          <th plain-text column-ids="number">No.</th>
+          <th plain-text column-ids="building">Edificio</th>
+          <th plain-text column-ids="address">Dirección</th>
+          <th plain-text column-ids="use">Uso</th>
+          <th plain-text column-ids="type">Tipo</th>
+          <th plain-text column-ids="add">Agregar</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr item="id1">
+          <td>1</td>
+          <td>ALTAVILLA</td>
+          <td>LAGO DE PATZCUARO 57 LA LAGUNA 54190</td>
+          <td>CENTRAL</td>
+          <td></td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id2">
+          <td>2</td>
+          <td>AMECAMECA</td>
+          <td>MELCHOR OCAMPO 105 ENTRE L. ROSARIO Y S. LOPEZ</td>
+          <td>CENTRAL</td>
+          <td></td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id3">
+          <td>3</td>
+          <td>AMEYALCO</td>
+          <td></td>
+          <td>CENTRAL</td>
+          <td></td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id4">
+          <td>4</td>
+          <td>ARBOLEDAS</td>
+          <td>AV. DE LOS JINETES 115 LAS ARBOLEDAS 52950</td>
+          <td>CENTRAL</td>
+          <td></td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id5">
+          <td>5</td>
+          <td>ATIZAPAN</td>
+          <td>PORFIRIO DIAZ 0 COL. IMPERIAL DE BELLAVISTA 52789</td>
+          <td>CENTRAL</td>
+          <td>VIRTUAL</td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id6">
+          <td>6</td>
+          <td>ATLACOMULCO</td>
+          <td>CARRETERA ATLACOMULCO - EL ORO S/N</td>
+          <td>CENTRAL</td>
+          <td></td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id7">
+          <td>7</td>
+          <td>AURORA</td>
+          <td>CIRCUITO HUITZUCO S/N ENTRE E INFONAVIT</td>
+          <td>CENTRAL</td>
+          <td></td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id8">
+          <td>8</td>
+          <td>AVANDARO</td>
+          <td>AV. FONTANA RICA S/N</td>
+          <td>CENTRAL</td>
+          <td></td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id9">
+          <td>9</td>
+          <td>AYOTLA</td>
+          <td>RIO BALSAS S7N UNIDAD HABITACIONAL AYOTLA 56560 ENTRE ESQ. RIO PAPALOAPAN</td>
+          <td>CENTRAL</td>
+          <td></td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id10">
+          <td>10</td>
+          <td>AZTECA</td>
+          <td>BLVD.DE LOS AZTECAS 182 CD AZTECA 55120 ENTRE 1a SECC. CD. AZTECA</td>
+          <td>CENTRAL</td>
+          <td></td>
+          <td>Agregar</td>
+         </tr>
+        </tbody>
+       </table>
+      </vaadin-grid>
+      <vaadin-horizontal-layout width-full>
+       <vaadin-label style-name="tiny" id="lblTotalRecords" plain-text _id="lblTotalRecords" :center>
+         263 registros encontrados. 
+       </vaadin-label>
+      </vaadin-horizontal-layout>
+      <vaadin-horizontal-layout spacing="false" width-full height="40px">
+       <vaadin-horizontal-layout :right>
+        <vaadin-button style-name="tiny" id="btnCancel" plain-text _id="btnCancel" :middle>
+          Cancelar 
+        </vaadin-button>
+        <vaadin-button style-name="tiny" id="btnAdd" plain-text _id="btnAdd" :middle :right>
+          Agregar selección 
+        </vaadin-button>
+       </vaadin-horizontal-layout>
+      </vaadin-horizontal-layout>
+     </vaadin-vertical-layout>
+    </vaadin-css-layout>
+   </vaadin-vertical-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

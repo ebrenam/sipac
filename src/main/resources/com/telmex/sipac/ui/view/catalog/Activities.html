@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta name="vaadin-version" content="8.0.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" size-full margin="false">
+   <vaadin-vertical-layout style-name="v-scrollable" spacing="false" width="850px" height-full margin="false" :middle :center>
+    <vaadin-css-layout size-full>
+     <vaadin-vertical-layout style-name="card" margin-top="false" margin-bottom="false">
+      <vaadin-horizontal-layout spacing="false" width-full>
+       <vaadin-horizontal-layout :middle :right>
+        <vaadin-text-field style-name="small" id="txtSearch" width="300px" _id="txtSearch" :middle></vaadin-text-field>
+        <vaadin-button icon="fonticon://Vaadin-Icons/e805" style-name="tiny friendly" id="btnSearch" plain-text _id="btnSearch" :middle :right>
+          Buscar 
+        </vaadin-button>
+       </vaadin-horizontal-layout>
+      </vaadin-horizontal-layout>
+      <vaadin-grid width-full>
+       <table>
+        <colgroup>
+         <col column-id="number" sortable>
+         <col column-id="description" sortable>
+         <col column-id="add" sortable="false">
+        </colgroup>
+        <thead>
+         <tr default>
+          <th plain-text column-ids="number">No.</th>
+          <th plain-text column-ids="description">Actividad</th>
+          <th plain-text column-ids="add"></th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr item="id1">
+          <td>1</td>
+          <td>ACCESO A ALMACEN ACTIVIDADES CTBR E INFRAESTRUCTURA</td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id2">
+          <td>2</td>
+          <td>ACCESO A ALMACÉN</td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id3">
+          <td>3</td>
+          <td>ACCESO A SALAS</td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id4">
+          <td>4</td>
+          <td>ACCESO A SALAS ENTIDAD RDA</td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id5">
+          <td>5</td>
+          <td>ACCESO A SALAS INFRAESTRUCTURA CTBR</td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id6">
+          <td>6</td>
+          <td>ALEJANDRA GLEZ RED UNO ACCESO SALAS UNINET Y RCDT MTTO CORRECTIVO Y PREV A EQUIPOS Y CABLEADOS</td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id7">
+          <td>7</td>
+          <td>ALMACEN INTERNO ACTIVIDAD RDA</td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id8">
+          <td>8</td>
+          <td>ENTREGA DE SERVICIOS RDA</td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id9">
+          <td>9</td>
+          <td>ESTUDIO LINEA DE VSTA INSTALACIONES</td>
+          <td>Agregar</td>
+         </tr>
+         <tr item="id10">
+          <td>10</td>
+          <td>ESTUDIO LINEA DE VISTA RDA</td>
+          <td>Agregar</td>
+         </tr>
+        </tbody>
+       </table>
+      </vaadin-grid>
+      <vaadin-horizontal-layout width-full>
+       <vaadin-label style-name="tiny" id="lblTotalRecords" plain-text _id="lblTotalRecords" :center>
+         74 registros encontrados. 
+       </vaadin-label>
+      </vaadin-horizontal-layout>
+      <vaadin-horizontal-layout spacing="false" width-full height="40px">
+       <vaadin-horizontal-layout :right>
+        <vaadin-button style-name="tiny" id="btnCancel" plain-text _id="btnCancel" :middle>
+          Cancelar 
+        </vaadin-button>
+        <vaadin-button style-name="tiny" id="btnAdd" plain-text _id="btnAdd" :middle :right>
+          Agregar selección 
+        </vaadin-button>
+       </vaadin-horizontal-layout>
+      </vaadin-horizontal-layout>
+     </vaadin-vertical-layout>
+    </vaadin-css-layout>
+   </vaadin-vertical-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

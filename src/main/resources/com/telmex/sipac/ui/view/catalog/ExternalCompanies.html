@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta name="vaadin-version" content="8.0.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" size-full margin="false">
+   <vaadin-vertical-layout style-name="v-scrollable" spacing="false" width="800px" height-full margin="false" :middle :center>
+    <vaadin-css-layout size-full>
+     <vaadin-vertical-layout style-name="card" margin-top="false" margin-bottom="false">
+      <vaadin-css-layout width-full>
+       <vaadin-vertical-layout margin="false">
+        <vaadin-horizontal-layout width-full>
+         <vaadin-combo-box caption="Nombre de la empresa:" style-name="tiny" id="cboCompany" width="300px" data-item-type="java.lang.String" _id="cboCompany">
+          <option item="id1">ADSA</option>
+          <option item="id2">COMERTEL</option>
+          <option item="id3">C.T.B.R</option>
+          <option item="id4”>CYCSA</option>
+<option item=">FYCSA</option>
+          <option item="id6”>GTA</option>
+<option item=">IMTSA</option>
+          <option item="id8”>INTTELMEX</option>
+<option item=">RED UNO</option>
+          <option item="id10”>TECHMARKETING</option>
+<option item=">TELECO</option>
+          <option item="id12”>TELMEX</option>
+<option item=">TELNOR</option>
+         </vaadin-combo-box>
+         <vaadin-text-field caption="Nombre del proveedor:" style-name="tiny" id="txtProvider" width="300px" _id="txtProvider"></vaadin-text-field>
+        </vaadin-horizontal-layout>
+        <vaadin-horizontal-layout width-full>
+         <vaadin-horizontal-layout :middle :right>
+          <vaadin-button style-name="tiny" id="btnCancel" plain-text _id="btnCancel">
+            Cancelar 
+          </vaadin-button>
+          <vaadin-button icon="fonticon://Vaadin-Icons/e805" style-name="tiny friendly" id="btnSearch" plain-text _id="btnSearch">
+            Buscar 
+          </vaadin-button>
+         </vaadin-horizontal-layout>
+        </vaadin-horizontal-layout>
+       </vaadin-vertical-layout>
+      </vaadin-css-layout>
+      <vaadin-grid width-full>
+       <table>
+        <colgroup>
+         <col column-id="number" sortable>
+         <col column-id="company" sortable>
+        </colgroup>
+        <thead>
+         <tr default>
+          <th plain-text column-ids="number">No.</th>
+          <th plain-text column-ids="company">Razón Social</th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr item="id1">
+          <td>1</td>
+          <td>HUAWEI TECHNOLOGIES DE MEXICO SA DE CV</td>
+         </tr>
+         <tr item="id2">
+          <td>2</td>
+          <td>HUAWEI TECHNOLOGIES ENGINEERING DE MEXICO SA DE CV</td>
+         </tr>
+         <tr item="id3">
+          <td>3</td>
+          <td>Huawei Technologies de Mexico CERTIFICADOS</td>
+         </tr>
+        </tbody>
+       </table>
+      </vaadin-grid>
+      <vaadin-horizontal-layout width-full>
+       <vaadin-label style-name="tiny" id="lblTotalRecords" plain-text _id="lblTotalRecords" :center>
+         3 registros encontrados. 
+       </vaadin-label>
+      </vaadin-horizontal-layout>
+      <vaadin-horizontal-layout spacing="false" width-full height="40px">
+       <vaadin-horizontal-layout :right>
+        <vaadin-button style-name="tiny" id="btnAdd" plain-text _id="btnAdd" :middle :right>
+          Agregar selección 
+        </vaadin-button>
+       </vaadin-horizontal-layout>
+      </vaadin-horizontal-layout>
+     </vaadin-vertical-layout>
+    </vaadin-css-layout>
+   </vaadin-vertical-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

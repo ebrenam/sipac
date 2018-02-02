@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta name="vaadin-version" content="8.0.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" size-full margin="false">
+   <vaadin-vertical-layout spacing="false" width="940px" height-full margin="false" :center>
+    <vaadin-css-layout width="940px" height-full>
+     <vaadin-css-layout style-name="card" width="940px" height="60px">
+      <vaadin-css-layout width="150px" height-full>
+       <vaadin-image source="/Users/ebrena/Projects/STSProjects/sipac/src/main/webapp/VAADIN/themes/sipactheme/logo.png"></vaadin-image>
+      </vaadin-css-layout>
+      <vaadin-css-layout width="780px" height-full>
+       <vaadin-vertical-layout spacing="false" size-full margin="false">
+        <vaadin-css-layout width-full height="30px">
+         <vaadin-horizontal-layout spacing="false" size-full>
+          <vaadin-horizontal-layout height-full :middle :right>
+           <vaadin-label style-name="small" id="lblUserName" plain-text _id="lblUserName" :middle :right>
+             Nombre el usuario 
+           </vaadin-label>
+           <vaadin-button icon="fonticon://Vaadin-Icons/e72f" style-name="tiny borderless" id="btnHelp" plain-text _id="btnHelp">
+             Ayuda 
+           </vaadin-button>
+           <vaadin-button icon="fonticon://Vaadin-Icons/e798" style-name="tiny borderless" id="btnLogout" plain-text _id="btnLogout">
+             Salir 
+           </vaadin-button>
+          </vaadin-horizontal-layout>
+         </vaadin-horizontal-layout>
+        </vaadin-css-layout>
+        <vaadin-css-layout width-full height="30px">
+         <vaadin-horizontal-layout spacing="false" size-full margin-left>
+          <vaadin-menu-bar visible="false" style-name="small borderless">
+           <menu>
+             Búsqueda 
+           </menu>
+           <menu>
+             Nueva 
+           </menu>
+           <menu description="Some description">
+             Plantillas 
+           </menu>
+          </vaadin-menu-bar>
+         </vaadin-horizontal-layout>
+        </vaadin-css-layout>
+       </vaadin-vertical-layout>
+      </vaadin-css-layout>
+     </vaadin-css-layout>
+     <vaadin-css-layout width="940px" height="85%">
+      <vaadin-css-layout style-name="well" width="150px" height-full>
+       <vaadin-css-layout id="menu" width-full _id="menu">
+        <vaadin-button icon="fonticon://Vaadin-Icons/e7e8" style-name="quiet tiny" id="btnDashboard" width-full height="70px" plain-text _id="btnDashboard">
+          Inicio 
+        </vaadin-button>
+        <vaadin-button icon="fonticon://Vaadin-Icons/e633" style-name="quiet tiny" id="btnRequest" width-full height="70px" plain-text _id="btnRequest">
+          Solicitudes 
+        </vaadin-button>
+        <vaadin-button icon="fonticon://Vaadin-Icons/e63d" style-name="quiet tiny" id="btnExitPass" width-full height="70px" plain-text _id="btnExitPass">
+          Pase de salida 
+        </vaadin-button>
+        <vaadin-button icon="fonticon://Vaadin-Icons/e92a" style-name="quiet tiny" id="btnComplain" width-full height="70px" plain-text _id="btnComplain">
+          Quejas 
+        </vaadin-button>
+        <vaadin-button icon="fonticon://Vaadin-Icons/e748" style-name="quiet tiny" id="btnDangerousWork" width-full height="70px" plain-text _id="btnDangerousWork">
+          Trabajos peligrosos 
+        </vaadin-button>
+       </vaadin-css-layout>
+      </vaadin-css-layout>
+      <vaadin-css-layout style-name="card" width="790px" height-full>
+       <vaadin-vertical-layout spacing="false" id="content" size-full margin="false" _id="content"></vaadin-vertical-layout>
+      </vaadin-css-layout>
+     </vaadin-css-layout>
+     <vaadin-css-layout width="940px">
+      <vaadin-horizontal-layout spacing="false" width-full>
+       <vaadin-label style-name="tiny" plain-text :right>
+         © TELMEX. Todos los derechos reservados. 
+       </vaadin-label>
+      </vaadin-horizontal-layout>
+     </vaadin-css-layout>
+    </vaadin-css-layout>
+   </vaadin-vertical-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

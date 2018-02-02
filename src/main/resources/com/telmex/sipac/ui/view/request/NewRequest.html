@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta name="vaadin-version" content="8.0.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout spacing="false" size-full margin="false">
+   <vaadin-vertical-layout style-name="v-scrollable" spacing="false" id="main" size-full margin-left="false" margin-right="false" margin-bottom="false" _id="main" :middle :center>
+    <vaadin-css-layout size-full>
+     <vaadin-css-layout id="body" size-full _id="body">
+      <vaadin-tab-sheet style-name="framed equal-width-tabs compact-tabbar">
+       <tab caption="Datos Personales" icon="fonticon://Vaadin-Icons/e6b2" selected>
+        <vaadin-css-layout width-full>
+         <vaadin-vertical-layout>
+          <vaadin-text-area required-indicator-visible caption="Descripción de los trabajos:" rows="3" style-name="small" id="txtWorkDescription" width-full _id="txtWorkDescription"></vaadin-text-area>
+          <vaadin-label style-name="small bold" plain-text>
+            Período de realización de los trabajos: 
+          </vaadin-label>
+          <vaadin-horizontal-layout>
+           <vaadin-date-time-field required-indicator-visible caption="Fecha de inicio" id="txtStartDate" placeholder="dd-mm-aaaa HH:mm" date-format="dd-MM-yyyy HH:mm" style-name="small" _id="txtStartDate"></vaadin-date-time-field>
+           <vaadin-date-time-field required-indicator-visible caption="Fecha de fin" id="txtEndDate" placeholder="dd-mm-aaaa HH:mm" date-format="dd-MM-yyyy HH:mm" style-name="small" _id="txtEndDate"></vaadin-date-time-field>
+          </vaadin-horizontal-layout>
+          <vaadin-horizontal-layout>
+           <vaadin-horizontal-layout spacing="false" margin-left>
+            <vaadin-vertical-layout size-auto margin="false">
+             <vaadin-label style-name="small bold" plain-text>
+               Días especiales de acceso 
+             </vaadin-label>
+             <vaadin-horizontal-layout>
+              <vaadin-check-box caption="Sábado" style-name="small" id="chkSaturday" _id="chkSaturday"></vaadin-check-box>
+              <vaadin-check-box caption="Domingo" style-name="small" id="chkSunday" _id="chkSunday"></vaadin-check-box>
+              <vaadin-check-box caption="Día festivo" style-name="small" id="chkHoliday" _id="chkHoliday"></vaadin-check-box>
+             </vaadin-horizontal-layout>
+            </vaadin-vertical-layout>
+           </vaadin-horizontal-layout>
+          </vaadin-horizontal-layout>
+          <vaadin-text-area caption="Lista de materiales:" rows="3" style-name="small" id="txtMaterialList" width-full _id="txtMaterialList"></vaadin-text-area>
+          <vaadin-text-area caption="Relación de herramientas y/o equipo:" rows="3" style-name="small" id="txtToolEquipmentList" width-full _id="txtToolEquipmentList"></vaadin-text-area>
+         </vaadin-vertical-layout>
+        </vaadin-css-layout>
+       </tab>
+       <tab caption="Actividades" icon="fonticon://Vaadin-Icons/e641">
+        <vaadin-css-layout width-full>
+         <vaadin-vertical-layout>
+          <vaadin-grid width-full>
+           <table>
+            <colgroup>
+             <col column-id="number" sortable>
+             <col column-id="description" sortable>
+             <col column-id="delete" sortable="false">
+            </colgroup>
+            <thead>
+             <tr default>
+              <th plain-text column-ids="number">No.</th>
+              <th plain-text column-ids="description">Descripción</th>
+              <th plain-text column-ids="delete">Eliminar</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr item="id1">
+              <td>1</td>
+              <td>ACCESO A SALAS</td>
+              <td>Eliminar</td>
+             </tr>
+             <tr item="id2">
+              <td>2</td>
+              <td>INFRAESTRUCTURA CTBR</td>
+              <td>Eliminar</td>
+             </tr>
+             <tr item="id3">
+              <td>3</td>
+              <td>MANTENIMIENTO CTBR</td>
+              <td>Eliminar</td>
+             </tr>
+            </tbody>
+           </table>
+          </vaadin-grid>
+          <vaadin-horizontal-layout width-full>
+           <vaadin-label style-name="tiny" id="lblTotalActivities" plain-text _id="lblTotalActivities" :center>
+             3 registros encontrados. 
+           </vaadin-label>
+          </vaadin-horizontal-layout>
+          <vaadin-horizontal-layout spacing="false" width-full>
+           <vaadin-horizontal-layout :middle :right>
+            <vaadin-button style-name="tiny" id="btnAddActivities" plain-text _id="btnAddActivities" :middle :right>
+              Agregar actividade(s) 
+            </vaadin-button>
+           </vaadin-horizontal-layout>
+          </vaadin-horizontal-layout>
+          <vaadin-vertical-layout spacing="false" margin="false">
+           <vaadin-label style-name="small bold" plain-text>
+             Información adicional para ACCESO A SALAS 
+           </vaadin-label>
+           <vaadin-check-box caption="Trabajo en Sala Conmutación CX" style-name="small"></vaadin-check-box>
+           <vaadin-check-box caption="Trabajo en Sala Fuerza y Clima FyC" style-name="small"></vaadin-check-box>
+           <vaadin-check-box caption="Trabajo en Sala Transmisión TX" style-name="small"></vaadin-check-box>
+          </vaadin-vertical-layout>
+          <vaadin-vertical-layout spacing="false" margin="false">
+           <vaadin-label style-name="small bold" plain-text>
+             Información adicional para INFRAESTRUCTURA CTBR 
+           </vaadin-label>
+          </vaadin-vertical-layout>
+          <vaadin-vertical-layout spacing="false" margin="false">
+           <vaadin-label style-name="small bold" plain-text>
+             Información adicional para MANTENIMIENTO CTBR 
+           </vaadin-label>
+           <vaadin-check-box caption="¿Utilizarán equipos de soldadura eléctrica o autógena que produzcan flama o chispa?" style-name="small"></vaadin-check-box>
+          </vaadin-vertical-layout>
+         </vaadin-vertical-layout>
+        </vaadin-css-layout>
+       </tab>
+       <tab caption="Lugar" icon="fonticon://Vaadin-Icons/e900">
+        <vaadin-css-layout width-full>
+         <vaadin-vertical-layout>
+          <vaadin-text-field caption="Lugar o área específica:" style-name="tiny" id="txtAreaOrPlace" width="80%" _id="txtAreaOrPlace"></vaadin-text-field>
+          <vaadin-vertical-layout margin="false">
+           <vaadin-label style-name="small bold" plain-text>
+             Edificio(s): 
+           </vaadin-label>
+           <vaadin-grid width-full>
+            <table>
+             <colgroup>
+              <col column-id="number" sortable>
+              <col column-id="building" sortable>
+              <col column-id="address" sortable>
+              <col column-id="use" sortable>
+              <col column-id="delete" sortable="false">
+             </colgroup>
+             <thead>
+              <tr default>
+               <th plain-text column-ids="number">No.</th>
+               <th plain-text column-ids="building">Edificio</th>
+               <th plain-text column-ids="address">Dirección</th>
+               <th plain-text column-ids="use">Uso</th>
+               <th plain-text column-ids="delete">Eliminar</th>
+              </tr>
+             </thead>
+             <tbody>
+              <tr item="id1">
+               <td>1</td>
+               <td>AVANDARO</td>
+               <td>AV. FONTANA RICA S/N</td>
+               <td>CENTRAL</td>
+               <td>Eliminar</td>
+              </tr>
+              <tr item="id2">
+               <td>2</td>
+               <td>ALTAVILLA</td>
+               <td>LAGO DE PATZCUARO 67 LA LAGUNA 54190</td>
+               <td>CENTRAL</td>
+               <td>Eliminar</td>
+              </tr>
+              <tr item="id3">
+               <td>3</td>
+               <td>ABASTOS</td>
+               <td>EJE 6 SUR S/N ENTRE CONTINUACION</td>
+               <td>CENTRAL</td>
+               <td>Eliminar</td>
+              </tr>
+             </tbody>
+            </table>
+           </vaadin-grid>
+           <vaadin-horizontal-layout width-full>
+            <vaadin-label style-name="tiny" id="lblTotalBuildings" plain-text _id="lblTotalBuildings" :center>
+              3 registros encontrados. 
+            </vaadin-label>
+           </vaadin-horizontal-layout>
+          </vaadin-vertical-layout>
+          <vaadin-horizontal-layout spacing="false" width-full>
+           <vaadin-horizontal-layout :middle :right>
+            <vaadin-button style-name="tiny" id="btnAddBuildings" plain-text _id="btnAddBuildings" :middle :right>
+              Agregar edificio(s) 
+            </vaadin-button>
+           </vaadin-horizontal-layout>
+          </vaadin-horizontal-layout>
+         </vaadin-vertical-layout>
+        </vaadin-css-layout>
+       </tab>
+       <tab caption="Empleados" icon="fonticon://Vaadin-Icons/e629">
+        <vaadin-css-layout width-full>
+         <vaadin-vertical-layout>
+          <vaadin-grid width-full>
+           <table>
+            <colgroup>
+             <col column-id="number" sortable>
+             <col column-id="company" sortable>
+             <col column-id="record" sortable>
+             <col column-id="name" sortable>
+             <col column-id="delete" sortable="false">
+            </colgroup>
+            <thead>
+             <tr default>
+              <th plain-text column-ids="number">No.</th>
+              <th plain-text column-ids="company">Empresa</th>
+              <th plain-text column-ids="record">Expediente</th>
+              <th plain-text column-ids="name">Nombre</th>
+              <th plain-text column-ids="delete">Eliminar</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr item="id1">
+              <td>1</td>
+              <td>HUAWEI TECHNOLOGIES DE MEXICO SA DE CV</td>
+              <td>HUAWEI 140908 3</td>
+              <td>ABAN TENORIO JUAN CARLOS</td>
+              <td>Eliminar</td>
+             </tr>
+             <tr item="id2">
+              <td>2</td>
+              <td>HUAWEI TECHNOLOGIES DE MEXICO SA DE CV</td>
+              <td>WX4777</td>
+              <td>ABRACH ANDRADE ALFONSO</td>
+              <td>Eliminar</td>
+             </tr>
+             <tr item="id3">
+              <td>3</td>
+              <td>HUAWEI TECHNOLOGIES DE MEXICO SA DE CV</td>
+              <td>00900536</td>
+              <td>ABRAHAM ALBIN</td>
+              <td>Eliminar</td>
+             </tr>
+             <tr item="id4">
+              <td>3</td>
+              <td>HUAWEI TECHNOLOGIES DE MEXICO SA DE CV</td>
+              <td>ACMA130227</td>
+              <td>ACOSTA MARIN MIGUEL SAID</td>
+              <td>Eliminar</td>
+             </tr>
+            </tbody>
+           </table>
+          </vaadin-grid>
+          <vaadin-horizontal-layout width-full>
+           <vaadin-label style-name="tiny" id="lblTotalEmployees" plain-text _id="lblTotalEmployees" :center>
+             4 registros encontrados. 
+           </vaadin-label>
+          </vaadin-horizontal-layout>
+          <vaadin-horizontal-layout spacing="false" width-full>
+           <vaadin-horizontal-layout :middle :right>
+            <vaadin-button style-name="tiny" id="btnAddEmployees" plain-text _id="btnAddEmployees" :middle :right>
+              Agregar empleado(s) 
+            </vaadin-button>
+           </vaadin-horizontal-layout>
+          </vaadin-horizontal-layout>
+         </vaadin-vertical-layout>
+        </vaadin-css-layout>
+       </tab>
+      </vaadin-tab-sheet>
+      <vaadin-horizontal-layout spacing="false" width-full>
+       <vaadin-horizontal-layout height="60px" :middle :right>
+        <vaadin-button style-name="tiny" id="btnSave" plain-text _id="btnSave" :middle>
+          Guardar cambios 
+        </vaadin-button>
+        <vaadin-button style-name="primary tiny" id="btnContinue" plain-text _id="btnContinue" :middle :right>
+          Continuar 
+        </vaadin-button>
+       </vaadin-horizontal-layout>
+      </vaadin-horizontal-layout>
+     </vaadin-css-layout>
+    </vaadin-css-layout>
+   </vaadin-vertical-layout>
+  </vaadin-vertical-layout>
+ </body>
+</html>

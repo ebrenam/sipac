@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;GENERATE_GETTERS&quot;:false,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;valo&quot;}">
+  <meta name="vaadin-version" content="8.0.5">
+ </head>
+ <body>
+  <vaadin-vertical-layout size-full>
+   <vaadin-label caption="Ejemplo MVP con acceso a BD." plain-text></vaadin-label>
+   <vaadin-text-field caption="Dime tu nombre:" width-full height="37px" _id="txtField"></vaadin-text-field>
+   <vaadin-button plain-text _id="btnPress">
+     continuar 
+   </vaadin-button>
+   <vaadin-horizontal-layout></vaadin-horizontal-layout>
+   <vaadin-grid  size-full data-item-type="com.telmex.sipac.backend.data.entity.Customer" _id="gridCustomers"></vaadin-grid>
+  </vaadin-vertical-layout>
+ </body>
+</html>
