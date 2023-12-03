@@ -1,0 +1,674 @@
+{
+  "uuid": "a62ff7a6-4cfd-46f3-9a9c-7d245b9498dd",
+  "lastMigration": 28,
+  "name": "m TMF632-Service Inventory-Telmex",
+  "endpointPrefix": "stakeholder",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "6c2d1a56-42e5-4aa5-bd67-8295b3e8f227",
+      "type": "http",
+      "documentation": "Creates a Individual",
+      "method": "post",
+      "endpoint": "individual",
+      "responses": [
+        {
+          "uuid": "db6e673f-cded-4e0c-b0a8-8b2efd86da7a",
+          "body": "{\r\n  \"name\": \"Lionel\",\r\n  \"lastName\": \"Messi\",\r\n  \"maternalFamilyName\": \"Cuccittini\",\r\n  \"idExterno\": \"56789\",\r\n  \"role\": \"Contacto\",\r\n  \"region\": \"MTY\",\r\n  \"CUC\": \"E055057997\",\r\n  \"externalReference\": [\r\n    {\r\n      \"name\": \"http://twitter.com/17263635\",\r\n      \"externalReferenceType\": \"X (twitter)\"\r\n    }\r\n  ],\r\n  \"partyCharacteristic\": [\r\n    {\r\n      \"name\": \"diasContacto\",\r\n      \"value\": \"Lunes, Miercoles, Viernes\"\r\n    },\r\n    {\r\n      \"name\": \"horaInicialFinalContacto\",\r\n      \"value\": \"10-18\"\r\n    },\r\n    {\r\n      \"name\": \"Comentarios\",\r\n      \"value\": \"Notas de referencia...\"\r\n    }\r\n  ],\r\n  \"relatedParty\": [\r\n    {\r\n      \"organization\": {\r\n        \"id\": \"111\",\r\n        \"name\": \"Telmex\",\r\n        \"role\": \"Concesionario\"\r\n      }\r\n    },\r\n    {\r\n      \"organization\": {\r\n        \"id\": \"\",\r\n        \"name\": \"Messi SA\",\r\n        \"role\": \"Nombre de la empresa que factura\"\r\n      }\r\n    },\r\n    {\r\n      \"individual\": {\r\n        \"name\": \"Ana\",\r\n        \"lastName\": \"Martinez\",\r\n        \"maternalFamilyName\": \"Chavez\",\r\n        \"role\": \"Contacto principal del cliente final\",\r\n        \"contactMedium\": [\r\n          {\r\n            \"mediumType\": \"email\",\r\n            \"preferred\": \"false\",\r\n            \"characteristic\": {\r\n              \"emailAddress\": \"ana@hotmail.com\"\r\n            }\r\n          },\r\n          {\r\n            \"mediumType\": \"movilTelephone\",\r\n            \"preferred\": \"true\",\r\n            \"characteristic\": {\r\n              \"phoneNumber\": \"6641515155\"\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    },\r\n    {\r\n      \"individual\": {\r\n        \"name\": \"Juan\",\r\n        \"lastName\": \"Perez\",\r\n        \"maternalFamilyName\": \"Garcia\",\r\n        \"role\": \"Contacto instalacion\",\r\n        \"contactMedium\": [\r\n          {\r\n            \"mediumType\": \"email\",\r\n            \"preferred\": \"false\",\r\n            \"characteristic\": {\r\n              \"emailAddress\": \"juan@hotmail.com\"\r\n            }\r\n          },\r\n          {\r\n            \"mediumType\": \"movilTelephone\",\r\n            \"preferred\": \"true\",\r\n            \"characteristic\": {\r\n              \"phoneNumber\": \"5556787879\"\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "Individual",
+          "headers": [
+            {
+              "key": "mic_api_key",
+              "value": "XKsKlhxZlufrrUmhla1HQWQS952ZRn4o"
+            },
+            {
+              "key": "mic_channel",
+              "value": "cliente1"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "externalReference",
+              "value": "",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "externalReference",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            },
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "400",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "401",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "403",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "405",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "409",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "500",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "5120cc9d-ec70-44aa-84fb-41dd2e140be1",
+          "body": "{\r\n  \"name\": \"Pizza hut\",\r\n  \"lastName\": \"\",\r\n  \"maternalFamilyName\": \"\",\r\n  \"idExterno\": \"56789\",\r\n  \"role\": \"Contacto\",\r\n  \"region\": \"MTY\",\r\n  \"CUC\": \"E055057997\",\r\n  \"relatedParty\": [\r\n    {\r\n      \"organization\": {\r\n        \"id\": \"126\",\r\n        \"name\": \"Televisa SA\",\r\n        \"role\": \"Concesionario\"\r\n      }\r\n    },\r\n    {\r\n      \"organization\": {\r\n        \"id\": \"126\",\r\n        \"name\": \"Televisa SA\",\r\n        \"role\": \"Nombre de la empresa que factura\"\r\n      }\r\n    },\r\n    {\r\n      \"individual\": {\r\n        \"name\": \"Ana\",\r\n        \"lastName\": \"Martinez\",\r\n        \"maternalFamilyName\": \"Chavez\",\r\n        \"role\": \"Contacto principal del cliente final\",\r\n        \"contactMedium\": [\r\n          {\r\n            \"mediumType\": \"email\",\r\n            \"preferred\": \"false\",\r\n            \"characteristic\": {\r\n              \"emailAddress\": \"ana@hotmail.com\"\r\n            }\r\n          },\r\n          {\r\n            \"mediumType\": \"movilTelephone\",\r\n            \"preferred\": \"true\",\r\n            \"characteristic\": {\r\n              \"phoneNumber\": \"6641515155\"\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    },\r\n    {\r\n      \"individual\": {\r\n        \"name\": \"Juan\",\r\n        \"lastName\": \"Perez\",\r\n        \"maternalFamilyName\": \"Garcia\",\r\n        \"role\": \"Contacto instalacion\",\r\n        \"contactMedium\": [\r\n          {\r\n            \"mediumType\": \"email\",\r\n            \"preferred\": \"false\",\r\n            \"characteristic\": {\r\n              \"emailAddress\": \"juan@hotmail.com\"\r\n            }\r\n          },\r\n          {\r\n            \"mediumType\": \"movilTelephone\",\r\n            \"preferred\": \"true\",\r\n            \"characteristic\": {\r\n              \"phoneNumber\": \"5556787879\"\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "Reventas",
+          "headers": [
+            {
+              "key": "mic_api_key",
+              "value": "XKsKlhxZlufrrUmhla1HQWQS952ZRn4o"
+            },
+            {
+              "key": "mic_channel",
+              "value": "cliente1"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "externalReference",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "externalReference",
+              "value": "",
+              "invert": false,
+              "operator": "null"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "93a42a78-f483-4251-83d1-3956a5f333ca",
+          "body": "{\r\n  \"code\": \"1401\",\r\n  \"type\": \"Validación datos de entrada\",\r\n  \"message\": \"Longitud invalida del campo name.\"\r\n}",
+          "latency": 0,
+          "statusCode": 400,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "400",
+              "invert": false,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "externalReference",
+              "value": "",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "externalReference",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "bff16d91-886a-4c54-9b48-f1de93990e8a",
+          "body": "{\r\n  \"code\": \"1401\",\r\n  \"type\": \"Validación datos de entrada\",\r\n  \"message\": \"Longitud invalida del campo name.\"\r\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "401",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "14eb7e45-6569-48bd-a235-98f363d19535",
+          "body": "{\r\n  \"code\": \"1401\",\r\n  \"type\": \"Validación datos de entrada\",\r\n  \"message\": \"Longitud invalida del campo name.\"\r\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "403",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "ac54bc87-27b1-4c0b-8a20-0b01fa0851dc",
+          "body": "{\r\n  \"code\": \"1401\",\r\n  \"type\": \"Validación datos de entrada\",\r\n  \"message\": \"Longitud invalida del campo name.\"\r\n}",
+          "latency": 0,
+          "statusCode": 405,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "405",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "46ac91d7-eb56-4dd6-bd65-8f9da113fcf7",
+          "body": "{\r\n  \"code\": \"1401\",\r\n  \"type\": \"Validación datos de entrada\",\r\n  \"message\": \"Longitud invalida del campo name.\"\r\n}",
+          "latency": 0,
+          "statusCode": 409,
+          "label": " ",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "409",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "63579111-4fe2-4826-a574-81d8af0bbeb8",
+          "body": "{\r\n  \"code\": \"1401\",\r\n  \"type\": \"Validación datos de entrada\",\r\n  \"message\": \"Longitud invalida del campo name.\"\r\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [
+            {
+              "key": "api_key",
+              "value": "XKsKlhxZlufrrUmhla1HQWQS952ZRn4o"
+            },
+            {
+              "key": "channel",
+              "value": "cliente1"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "500",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    },
+    {
+      "uuid": "09f93959-8ae8-44b1-a201-bb410f27c600",
+      "type": "http",
+      "documentation": "Creates a organization",
+      "method": "post",
+      "endpoint": "organization",
+      "responses": [
+        {
+          "uuid": "e0f72bd6-d1ea-4afa-af82-9beee0a4948e",
+          "body": "{\r\n  \"name\": \"Pizza Hut\",\r\n  \"idExterno\": \"56789\",\r\n  \"role\": \"Contacto\",\r\n  \"region\": \"MTY\",\r\n  \"CUC\": \"E055057997\",\r\n  \"externalReference\": [\r\n    {\r\n      \"name\": \"http://twitter.com/17263635\",\r\n      \"externalReferenceType\": \"X (twitter)\"\r\n    }\r\n  ],\r\n  \"partyCharacteristic\": [\r\n    {\r\n      \"name\": \"diasContacto\",\r\n      \"value\": \"Lunes, Miercoles, Viernes\"\r\n    },\r\n    {\r\n      \"name\": \"horaInicialFinalContacto\",\r\n      \"value\": \"10-18\"\r\n    },\r\n    {\r\n      \"name\": \"Comentarios\",\r\n      \"value\": \"Notas de referencia...\"\r\n    },\r\n    {\r\n      \"name\": \"Giro\",\r\n      \"value\": \"G00261\"\r\n    }\r\n  ],\r\n  \"relatedParty\": [\r\n    {\r\n      \"organization\": {\r\n        \"id\": \"111\",\r\n        \"name\": \"Telmex\",\r\n        \"role\": \"Concesionario\"\r\n      }\r\n    },\r\n    {\r\n      \"organization\": {\r\n        \"id\": \"\",\r\n        \"name\": \"Pizza Hut SA\",\r\n        \"role\": \"Nombre de la empresa que factura\"\r\n      }\r\n    },\r\n    {\r\n      \"individual\": {\r\n        \"name\": \"Ana\",\r\n        \"lastName\": \"Martinez\",\r\n        \"maternalFamilyName\": \"Chavez\",\r\n        \"role\": \"Contacto principal del cliente final\",\r\n        \"contactMedium\": [\r\n          {\r\n            \"mediumType\": \"email\",\r\n            \"preferred\": \"false\",\r\n            \"characteristic\": {\r\n              \"emailAddress\": \"ana@hotmail.com\"\r\n            }\r\n          },\r\n          {\r\n            \"mediumType\": \"movilTelephone\",\r\n            \"preferred\": \"true\",\r\n            \"characteristic\": {\r\n              \"phoneNumber\": \"6641515155\"\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    },\r\n    {\r\n      \"individual\": {\r\n        \"name\": \"Juan\",\r\n        \"lastName\": \"Perez\",\r\n        \"maternalFamilyName\": \"Garcia\",\r\n        \"role\": \"Contacto instalacion\",\r\n        \"contactMedium\": [\r\n          {\r\n            \"mediumType\": \"email\",\r\n            \"preferred\": \"false\",\r\n            \"characteristic\": {\r\n              \"emailAddress\": \"juan@hotmail.com\"\r\n            }\r\n          },\r\n          {\r\n            \"mediumType\": \"movilTelephone\",\r\n            \"preferred\": \"true\",\r\n            \"characteristic\": {\r\n              \"phoneNumber\": \"5556787879\"\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "masivo",
+          "headers": [
+            {
+              "key": "mic_api_key",
+              "value": "XKsKlhxZlufrrUmhla1HQWQS952ZRn4o"
+            },
+            {
+              "key": "mic_channel",
+              "value": "cliente1"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "externalReference",
+              "value": "",
+              "invert": true,
+              "operator": "null"
+            },
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "400",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "401",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "403",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "405",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "409",
+              "invert": true,
+              "operator": "equals"
+            },
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "500",
+              "invert": true,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "AND",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "2f15b380-68f8-4a0a-8096-42c2e412a7cb",
+          "body": "{\r\n  \"name\": \"Pizza hut\",\r\n  \"idExterno\": \"56789\",\r\n  \"role\": \"Contacto\",\r\n  \"region\": \"MTY\",\r\n  \"CUC\": \"E055057997\",\r\n  \"relatedParty\": [\r\n    {\r\n      \"organization\": {\r\n        \"id\": \"126\",\r\n        \"name\": \"Televisa SA\",\r\n        \"role\": \"Concesionario\"\r\n      }\r\n    },\r\n    {\r\n      \"organization\": {\r\n        \"id\": \"126\",\r\n        \"name\": \"Televisa SA\",\r\n        \"role\": \"Nombre de la empresa que factura\"\r\n      }\r\n    },\r\n    {\r\n      \"individual\": {\r\n        \"name\": \"Ana\",\r\n        \"lastName\": \"Martinez\",\r\n        \"maternalFamilyName\": \"Chavez\",\r\n        \"role\": \"Contacto principal del cliente final\",\r\n        \"contactMedium\": [\r\n          {\r\n            \"mediumType\": \"email\",\r\n            \"preferred\": \"false\",\r\n            \"characteristic\": {\r\n              \"emailAddress\": \"ana@hotmail.com\"\r\n            }\r\n          },\r\n          {\r\n            \"mediumType\": \"movilTelephone\",\r\n            \"preferred\": \"true\",\r\n            \"characteristic\": {\r\n              \"phoneNumber\": \"6641515155\"\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    },\r\n    {\r\n      \"individual\": {\r\n        \"name\": \"Juan\",\r\n        \"lastName\": \"Perez\",\r\n        \"maternalFamilyName\": \"Garcia\",\r\n        \"role\": \"Contacto instalacion\",\r\n        \"contactMedium\": [\r\n          {\r\n            \"mediumType\": \"email\",\r\n            \"preferred\": \"false\",\r\n            \"characteristic\": {\r\n              \"emailAddress\": \"juan@hotmail.com\"\r\n            }\r\n          },\r\n          {\r\n            \"mediumType\": \"movilTelephone\",\r\n            \"preferred\": \"true\",\r\n            \"characteristic\": {\r\n              \"phoneNumber\": \"5556787879\"\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  ]\r\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "Reventas",
+          "headers": [
+            {
+              "key": "mic_api_key",
+              "value": "XKsKlhxZlufrrUmhla1HQWQS952ZRn4o"
+            },
+            {
+              "key": "mic_channel",
+              "value": "cliente1"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "externalReference",
+              "value": "201r",
+              "invert": false,
+              "operator": "null"
+            },
+            {
+              "target": "body",
+              "modifier": "externalReference",
+              "value": "",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "0fa0206f-f2b2-4e5f-a472-8c4401aeda5a",
+          "body": "{\r\n  \"code\": \"1401\",\r\n  \"type\": \"Validación datos de entrada\",\r\n  \"message\": \"Longitud invalida del campo name.\"\r\n}",
+          "latency": 0,
+          "statusCode": 400,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "400",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "2e4defea-63f5-4502-9b9d-6e9dec105ada",
+          "body": "{\r\n  \"code\": \"1401\",\r\n  \"type\": \"Validación datos de entrada\",\r\n  \"message\": \"Longitud invalida del campo name.\"\r\n}",
+          "latency": 0,
+          "statusCode": 401,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "401",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "be517424-66af-44d1-8d31-3a982ec8ccde",
+          "body": "{\r\n  \"code\": \"1401\",\r\n  \"type\": \"Validación datos de entrada\",\r\n  \"message\": \"Longitud invalida del campo name.\"\r\n}",
+          "latency": 0,
+          "statusCode": 403,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "403",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "964ffe43-e105-475e-863a-b18879a87da9",
+          "body": "{\r\n  \"code\": \"1401\",\r\n  \"type\": \"Validación datos de entrada\",\r\n  \"message\": \"Longitud invalida del campo name.\"\r\n}",
+          "latency": 0,
+          "statusCode": 405,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "405",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "aada1ad8-179c-4d7a-9032-cd78e881e7a0",
+          "body": "{\r\n  \"code\": \"1401\",\r\n  \"type\": \"Validación datos de entrada\",\r\n  \"message\": \"Longitud invalida del campo name.\"\r\n}",
+          "latency": 0,
+          "statusCode": 409,
+          "label": " ",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "409",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        },
+        {
+          "uuid": "00bfe653-4c80-401c-afee-6e30924423fc",
+          "body": "{\r\n  \"code\": \"1401\",\r\n  \"type\": \"Validación datos de entrada\",\r\n  \"message\": \"Longitud invalida del campo name.\"\r\n}",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "",
+          "headers": [
+            {
+              "key": "api_key",
+              "value": "XKsKlhxZlufrrUmhla1HQWQS952ZRn4o"
+            },
+            {
+              "key": "channel",
+              "value": "cliente1"
+            }
+          ],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "name",
+              "value": "500",
+              "invert": false,
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": false,
+          "crudKey": "id"
+        }
+      ],
+      "enabled": true,
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "6c2d1a56-42e5-4aa5-bd67-8295b3e8f227"
+    },
+    {
+      "type": "route",
+      "uuid": "09f93959-8ae8-44b1-a201-bb410f27c600"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "mic_process_id",
+      "value": "345983"
+    },
+    {
+      "key": "mic_transaction_id",
+      "value": "12345678-1234-1234-1234-123d456890AB"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": []
+}
+
